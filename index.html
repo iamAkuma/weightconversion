@@ -7,13 +7,7 @@
     <title>Weight Converter</title>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
     <link rel="stylesheet" href="style.css">
-    <style>
-        body {
-            margin-top: 70px;
-            background: #333;
-            color: #fff;
-        }
-    </style>
+
 </head>
 <body>
     <div class="container">
@@ -57,28 +51,6 @@
             </div>
         </div>
     </div>
-    <script>
-        document.getElementById('output').style.visibility = 'hidden';
-        document.getElementById('statusOutput').style.visibility = 'hidden';
-        document.getElementById('kgInput').addEventListener('input', function(e) {
-            document.getElementById('output').style.visibility = 'visible';
-            document.getElementById('statusOutput').style.visibility = 'visible';
-            let kg = e.target.value;
-            document.getElementById('gramsOutput').innerHTML = kg*1000;
-            document.getElementById('poundsOutput').innerHTML = kg* 2.20462;
-            document.getElementById('ouncesOutput').innerHTML = kg*35.274;
-
-            if (kg > 80) {
-                document.getElementById('statusOutput').innerHTML = '<h3>FATSO, GO THE GYM!</h3>';
-                document.getElementById('statusOutput').className = 'text-white bg-danger';
-            } else if (kg < 50) {
-                document.getElementById('statusOutput').innerHTML = '<h3>BRUH, EAT SOME FOOD!</h3>';
-                document.getElementById('statusOutput').className = 'text-dark bg-danger';
-            } else {
-                document.getElementById('statusOutput').innerHTML = '';
-                document.getElementById('statusOutput').className = '';
-            }
-        })
-    </script>
+    <script src="main.js"/>
 </body>
 </html>
